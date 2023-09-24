@@ -1,0 +1,194 @@
+.content{
+	width: 100%;
+	height: 100%;
+	min-height: 75vh;
+	/*linear-gradient here*/
+	position: relative;
+/*	position: absolute;*/
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2rem;
+
+	padding: 0 15%;
+}
+
+.content-text h4 {
+	font-size: 14px;
+	font-weight: 800;
+	color: #;
+	margin-bottom: 10px;
+}
+
+.content-text h1 {
+	font-family: sans-serif;
+	font-size: 50px;
+	font-weight: 800;
+	line-height: 1;
+	color: ;
+	margin: 0 0 45px;
+}
+.content-text p{
+	color: #2d243f;
+	font-size: 15px;
+	line-height: 1.25;
+	margin-bottom: 25px; /*max 35px*/
+}
+.content-text a{
+	text-decoration: none;
+	display: inline-block;
+	color: white;
+	background: #17cf97;
+	border: 1px solid transparent;
+	padding: 10px 30px;
+	line-height: 1.4;
+	font-size: 13px;
+	font-weight: 500;
+	border-radius: 8px;
+	text-transform: uppercase;
+	transition: all .55s ease;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.content-text a:hover{
+	background: transparent;
+	color: #2d243f;
+	border: 1px solid #2d243f;
+	transform: translateX(5px);
+}
+.content-text .see{
+	background: transparent;
+	color: #2d243f;
+	border: 1px solid #2d243f;
+}
+.content-text .see:hover{
+/*	background: #9678d3;*/
+/*	color: white;*/
+	color: #2d243f;
+	border: 1px solid #2d243f;
+}
+
+/*------------------------------------------------*/
+.content-faucet {
+	width: 450px;
+	height: ;
+	background: linear-gradient(-50deg, #9678d3 10%, #2d243f 100%);
+/*	border: 1px solid #17cf97;*/
+	border-right: 2px solid #17cf97;
+	border-bottom: 2px solid #17cf97;
+	border-radius: 8px;
+	/* spacing  */
+	padding: 1em;
+}
+
+.content-faucet h2{
+	font-size: 1.5em;
+	margin-bottom: 20px;
+	color: white;
+}
+.cf {
+	background: ;
+	margin-bottom: 20px;
+	color: #17cf97;
+}
+.cf h5{
+	font-size: 0.85rem;
+	font-weight: 400;
+	color: ;
+	letter-spacing: .0125em;
+	margin-bottom: 0.3em;
+}
+.cf .cf-input {
+	height: 2.5em;
+/*	width: 100%;*/
+	background: white;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.cf .cf-input > input {
+	background: transparent;
+	width: 100%;
+	height: 60%;
+	padding: 1.25em 0.9em;
+	/*---------------*/
+	outline: none;
+	border-style: none;
+	font-size: 15px;
+	font-weight: 500;
+}
+.cf .cf-cond {
+/*	background: black;*/
+}
+.cf .cf-cond a{
+	text-decoration: none;
+	display: inline-block;
+	color: white;
+	background: #08a0e9;
+	border: 1px solid transparent;
+	padding: 2px 20px;
+	border-radius: 4px;
+	/*font setting*/
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.4;
+	margin-bottom: 10px;
+	transition: all .55s ease;
+}
+.cf .cf-cond a:hover{
+	background: transparent;
+	border: 1px solid white;
+	transform: translateX(1px);
+}
+
+.content-faucet .request{
+	background: ;
+	text-align: center;
+}
+.content-faucet .request button {
+	background: #17cf97;
+	color: white;
+	border: none;
+	padding: 8px 40px;
+	margin: 10px 0 5px;
+	border-radius: 4px;
+	cursor: pointer;
+
+	/*font setting*/
+	font-size: 12px;
+	font-weight: 600;
+	transition: all .55s ease;
+}
+.content-faucet .request button:hover{
+	background: transparent;
+	border: 1px solid white;
+	transform: translateX(1px);
+}
+
+
+
+.test {
+	font-size: 0.75em;
+	margin-top: 3em;
+}
+
+
+
+
+
+@media screen and (max-width: 1195px) {
+	.content {
+		height: 100%;
+		gap: 1rem;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.content {
+		padding: 30px 7% 0;
+	}
+	.content-faucet {
+		width: 100%;
+		height: ;
+	}
+}
