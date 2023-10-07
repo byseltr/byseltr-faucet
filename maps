@@ -1,6 +1,10 @@
 # ========== FAUCET.BYSELTR FOLDER STRUCTURES ==========
 - [faucet.byseltr]
-	- [apps]
+	- [apps] (client applications)
+	- [config]
+		- db.js
+	- [models]
+		- api.js
 	- [node_modules]
 	- server.js
 	- .gitignore
