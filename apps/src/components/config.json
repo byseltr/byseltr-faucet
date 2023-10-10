@@ -1,0 +1,24 @@
+{
+	"drip": [
+		{
+			"NAME": "Polygon Mumbai",
+			"LOGO_URL": "logo192.png",
+			"ALT": "MUMBAI"
+		},
+		{
+			"NAME": "Avalanche Fuji",
+			"LOGO_URL": "logo192.png",
+			"ALT": "FUJI"
+		},
+		{
+			"NAME": "Ethereum Holesky",
+			"LOGO_URL": "logo192.png",
+			"ALT": "HOLESKY"
+		},
+		{
+			"NAME": "Zetachain Athens 3",
+			"LOGO_URL": "logo192.png",
+			"ALT": "ATHENS 3"
+		}
+	]
+}

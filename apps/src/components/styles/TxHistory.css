@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+
+.txs {
+	width: 100%;
+	background: ;
+	width:;
+	height: ;
+	
+	border-radius: 7px;
+}
+.txs .txs-head {
+	width: 100%;
+	font-family: 'Work Sans', sans-serif;
+	color: whitesmoke;
+	background: linear-gradient(-50deg, #9678d3 10%, #2d243f 100%);
+	padding: .75em;
+	border-radius: 7px;
+}
+.txs .txs-head h2 {
+	font-size: 0.95em;
+	font-weight: 600;
+}
+
+/*-------------------------------------*/
+.txs .txs-body {
+	width: 100%;
+	height: ;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: .5em;
+	padding: .5em 0;
+}
+.txs .txs-body .container {
+	width: 100%;
+	
+	overflow: hidden;
+}
+
+.tx {
+	width: 100%;
+	max-width: ;
+	height: ;
+	font-family: 'Work Sans', sans-serif;
+	padding: .5em .65em;
+	background: white;
+	border-radius: 7px;
+	overflow: hidden;
+	margin-bottom: .5em;
+}
+.tx .tx-title {
+	width: ;
+	max-width: ;
+	display:;
+	margin-bottom:;
+}
+.tx .tx-title h4 {
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: .9em;
+	line-height: 21px;
+	text-transform: lowercase;
+	margin-right: .35em;
+}
+.tx .tx-title p {
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: .9em;
+	line-height: 21px;
+	margin-right: .4em;
+}
+.tx .tx-title span {
+	display: inline-block; /*optional*/
+	font-size: .9em;
+	font-weight: 600;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+
+.tx .tx-content {
+	display: ;
+	margin-bottom: .45em;
+}
+.tx .tx-content p {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 98%;
+	height: 1.2em;
+	white-space: nowrap;
+	font-size: .9em;
+	line-height: 21px;
+}
+.tx .tx-content p strong {
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: 600;
+}
+.tx .tx-content p a {
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #9678d3;
+	margin-left: .4em;
+}
+
+.tx .tx-time {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*------------------------------------------------*/
+@media screen and (max-width: 1195px) {
+	.txs .txs-body {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+}

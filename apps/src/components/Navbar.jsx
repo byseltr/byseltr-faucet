@@ -12,23 +12,11 @@ class Navbar extends Component {
 		return (
 			<>
 				<nav>
-					<div id="nav-left">
-						<img src={logo} className="brand" alt="logo"/>
-						<a href="index.html">Byseltr</a>
-					</div>
-					{/*menu*/}
-					<div>
-						<ul id="nav-right"
-								className={this.state.clicked ? "#nav-right active" : "#nav-right"}>
-							<li><a href="index.html">Buy</a></li>
-							<li><a href="index.html" className="active">Donate</a></li>
-							<li><a href="index.html">Support</a></li>
-						</ul>
-					</div>
-					
-					<div id="mobile" onClick={this.handleClick}>
-						<i id="bar" className="fas fa-bars"></i>
-					</div>
+					<a href="/" className="brand">
+						<img src={logo} alt="brand"/>
+						{/*{this.props.name}*/}
+					</a>
+					<a href="/support" className="menu">Support</a>
 				</nav>
 			</>
 		)

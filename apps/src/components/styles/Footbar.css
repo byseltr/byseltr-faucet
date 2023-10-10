@@ -1,0 +1,50 @@
+.footbar {
+	width: 100%;
+	position: relative;
+	font-family: 'Work Sans', sans-serif;
+	margin-top: 3.1em;
+}
+.footbar .up {
+	display: none;
+	background: #44375F;
+	color: whitesmoke;
+	padding: 2em 13% 1.25em;
+}
+.footbar .up h5 {
+	margin-bottom: 1em;
+}
+.footbar .up .sosmed {
+	text-align: center;
+}
+.footbar .up a {
+	text-decoration: none;
+	font-size: 1.25em;
+	color: whitesmoke;
+	margin-left: .35em;
+	margin-right: .35em;
+}
+/*--------------------------------*/
+.footbar .down {
+	background: #2d243f;
+	color: #98a5b5;
+	padding: .75em 13%;
+}
+.footbar .down h5 {
+	font-size: .78em;
+	font-weight: 400;
+	line-height: 1.3;
+}
+.footbar .down h4 {
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+@media screen and (max-width: 1195px) {
+	.footbar .up {
+		padding: 1.5em 1em 1em;
+	}
+	.footbar .down {
+		padding: .75em 1em;
+	}
+}
