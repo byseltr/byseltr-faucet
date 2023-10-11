@@ -1,23 +1,15 @@
 import { MongoClient, ServerApiVersion } from 'mongodb'
-// const URI = process.env.MONGO_URI || ''
-const URI = "mongodb+srv://haver:12345@cluster0.yefiu.mongodb.net/?retryWrites=true&w=majority"
+// import dotenv from 'dotenv'
+// dotenv.config()
 
-// create a MongoClient with a MongoClientOptions
-// the object a set the stable API version
-// const client = new MongoClient(URI, {
-// 	serverApi: {
-// 		version: ServerApiVersion.v1,
-// 		strict: true,
-// 		deprecationErrors: true,
-// 	}
-// })
+const URI = process.env.MONGO_URI || ''
 
 async function connectDB() {
 	const client = new MongoClient(URI, {
 		serverApi: {
 			version: ServerApiVersion.v1,
 			strict: true,
-			deprecatedErrors: true,
+			deprecationErrors: true,
 		}
 	})
 
@@ -33,13 +25,9 @@ async function connectDB() {
 	return db
 }
 
-// let db = connectDB()
+export let db = await connectDB()
 
-// async function getCollection(client, name) {
-// 	let collection = await client.collection(name)
-// 	return collection
-
-// }
-
-// export default db
-connectDB()
+export async function getCollection(client, name) {
+	let collection = await client.collection(name)
+	return collection
+}

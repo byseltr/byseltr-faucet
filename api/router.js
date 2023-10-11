@@ -1,4 +1,6 @@
 import express from 'express'
+import { getList } from './model.js'
+
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -6,15 +8,14 @@ router.get('/', (req, res) => {
 })
 
 // show the last 10 transaction from various faucet
-router.get('/txs', (req, res) => {
-	res.send({
-		message: 'Transaction History',
-		data: null,
-	})
+router.get('/txs', async (req, res) => {
+	const txs = await getList()
+	res.send(txs)
 })
 
-router.get('/isClaimed', (req, res) => {
-	res.send({value: true})
+
+router.post('/drip', (req, res) => {
+	res.send('test').status(204)
 })
 
 export default router

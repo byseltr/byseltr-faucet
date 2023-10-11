@@ -1,0 +1,25 @@
+(RATELIMIT)
+REVERSE_PROXIES= 2
+MAX_LIMIT= 40
+WINDOW_SIZE= 1
+SKIP_FAILED_REQUESTS= false
+
+CHAIN_LIST= [
+	{
+		NAME= "Avalanche Fuji"
+		TOKEN= "AVAX"
+		RPC= "https://api.avax-test.network/ext/C/rpc"
+		CHAINID= 43113
+		EXPLORER= "https://testnet.snowtrace.io"
+		IMAGE= "https://glacier-api.avax.network/proxy/chain-assets/main/chains/43113/chain-logo.png"
+		MAX_PRIORITY_FEE= "10000000000"
+		MAX_FEE= "100000000000"
+		DRIP_AMOUNT= 1
+		DECIMALS= 18
+		RECALIBRATE= 30
+		RATELIMIT= {
+			MAX_LIMIT= 1
+			WINDOW_SIZE= 1440
+		}
+	}
+]

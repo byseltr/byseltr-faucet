@@ -1,3 +1,6 @@
+
+background: #f4f2f8
+border: #d5cde4
 /*-----------------------------------------*/
 COLOR PALLETS 1
 /*-----------------------------------------*/
@@ -31,6 +34,6 @@ COLOR PALLETS 3
 #B9AED0
 #C7BED9
 #D5CEE2
-#E3DEEC
+#E3DEEC (INPUT BACKGROUND)
 #F1EFF6
 #FFFFFF
