@@ -1,6 +1,6 @@
 import express from 'express'
 import { getList, createTX } from './model.js'
-import config from '../config.json' assert {type: 'json'}
+import config from '../config.js'
 
 const router = express.Router()
 

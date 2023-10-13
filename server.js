@@ -1,6 +1,13 @@
 import express from 'express'
 import cors from 'cors'
 import path from 'path'
+// [EXP]
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+console.log(__filename)
+const __dirname = path.dirname(__filename)
+console.log(__dirname)
+
 import router from './api/router.js'
 // import { rateLimiter } from './security/rateLimiter.js'
 import dotenv from 'dotenv'
@@ -10,7 +17,7 @@ const server = express()
 
 server.use(cors())
 server.use(express.json())
-server.use(express.static(path.join(__dirname, "apps")))
+server.use(express.static(path.join(__dirname, "build/apps")))
 // server.use(rateLimiter)
 server.use('/api', router)
 
@@ -20,7 +27,7 @@ server.get('/ip', (req, res) => {res.status(200).send({
 })})
 
 server.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, "apps", "index.html"))
+	res.sendFile(path.join(__dirname, "build/apps", "index.html"))
 })
 
 // running server
