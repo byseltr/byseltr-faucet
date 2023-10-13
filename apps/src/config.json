@@ -1,5 +1,5 @@
 {
 	"apiEndpointProduction": "/api/",
-	"apiEndpointDevelopment": "http://localhost:5000/api/",
+	"apiEndpointDevelopment": "https://localhost:5005/api/",
 	"apiTimeout": 40000
 }

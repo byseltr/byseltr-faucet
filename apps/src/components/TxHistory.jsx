@@ -1,6 +1,23 @@
+import { useEffect, useState } from 'react'
 import './styles/TxHistory.css'
+import axios, { config } from '../services/Api'
 
 function TxHistory() {
+	const [txs, setTxs] = useState(null)
+
+	useEffect(() => {
+		const getTxs = async () => {
+			const {data: response} = await axios.get(config.api.txs)
+			setTxs({
+				"left": response.left,
+				"right": response.right
+			})
+		}
+
+		getTxs()
+	}, [])
+
+	if (!txs) return 'load...'
 	return (
 		<div className="txs">
 			<div className="txs-head">
@@ -8,40 +25,42 @@ function TxHistory() {
 			</div>
 			<div className="txs-body">
 				<div className="container">
-					<Tx />
-					<Tx />
-					<Tx />
-					<Tx />
-					<Tx />
+					<Tx data={txs.left} />
 				</div>
 				<div className="container">
-					<Tx />
-					<Tx />
-					<Tx />
-					<Tx />
-					<Tx />
+					<Tx data={txs.right} />
 				</div>
 			</div>
 		</div>
 	)
 }
 
-function Tx() {
+function Tx(props) {
+
 	return (
-		<div className="tx">
-			<div className="tx-title">
-				<h4>0xD7...c11B</h4>
-				<p>request has successful!</p>
-				{/*<span>MATIC</pan>*/}
-			</div>
-			<div className="tx-content">
-				<p>
-					<strong>Tx Hash:</strong>
-					<a href="asu.ss">0xf08cf8dc3e9866d2ac8eb709e7b596f4d749115875d354b9a977efeb5846ed9c</a>
-				</p>
-			</div>
-			<span className="tx-time" style={{float: 'right'}}>{timeAgo('1696294120000')}</span>
-		</div>
+		<>
+			{props.data.map((tx) => (
+				<div className="tx" key={tx.id}>
+					<div className="tx-title">
+						<h4>0x{tx.address}...c11B</h4>
+						<p>request has successful!</p>
+					</div>
+					<div className="tx-content">
+						<p>
+							<strong>Tx Hash:</strong>
+							<a href={'tx/' + tx.hash}>
+								0xf08cf8dc3e9866d2ac8eb709e7b596f4d749115875d354b9a977efeb5846ed9c
+							</a>
+						</p>
+					</div>
+					<span 
+						className="tx-time" 
+						style={{float: 'right'}}>
+						{timeAgo('1696294120000')}
+					</span>
+				</div>
+			))}
+		</>
 	)
 }
 

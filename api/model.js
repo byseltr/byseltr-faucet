@@ -1,21 +1,25 @@
 import { db, getCollection } from '../config/db.js'
+let txs = await getCollection(db, 'txs')
 
-let txs = await getCollection(db, 'test')
-
-// Get a list of 10 transactions (10 txs)
-export async function getList() {
-	var result = await txs.find({})
+// Get a lists of last 10 transaction
+export const getList = async () => {
+	let lists = await txs.find({})
 		.sort({_id: -1})
 		.limit(10)
 		.toArray()
 
-	return result
+	if (lists.length !== 10) {
+		// error: cannot get list
+		return ''
+	}
+	return lists
 }
 
-// Add a new transaction (tx) to the test collection (txs)
-async function saveOne(tx) {
+// Create a new transaction (tx)
+// and save to database
+export const createTX = async (tx) => {
 	// code here...
 	tx.time = new Date()
-	var result = await txs.insertOne(tx)
-	return result
+	let res = await txs.insertOne(tx)
+	return res
 }

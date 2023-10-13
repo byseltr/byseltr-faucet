@@ -2,10 +2,13 @@ import axios from 'axios'
 import conf from '../config.json'
 
 export default axios.create({
-	baseURL: conf.apiEndpointDevelopment,
+	baseURL: conf.apiEndpointProduction,
 	timeout: conf.apiTimeout,
 })
 
 export const config = {
-	api: {},
+	api: {
+		txs: '/txs',
+		chain: '/config?chain='
+	},
 }
