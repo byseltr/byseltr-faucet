@@ -1,5 +1,5 @@
 import express from 'express'
-import serverless from 'serverless-http'
+// import serverless from 'serverless-http'
 import cors from 'cors'
 import path from 'path'
 // [EXP]
@@ -36,4 +36,4 @@ server.listen(port, () => {
 	console.log(`server is running on port ${port}`)
 })
 
-module.exports.handler = serverless(server)
+// module.exports.handler = serverless(server)
